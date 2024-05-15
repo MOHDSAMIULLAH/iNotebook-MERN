@@ -2,8 +2,8 @@
 
 # iNotebook
 
-## Deployed Link Backend: https://inotebook-backend-bk11.onrender.com
-## Deployed Link Frontend: https://inotebook-mernn.netlify.app/
+## Deployed Link Backend: https://inotebook-mern-m998.onrender.com
+## Deployed Link Frontend: 
 
 ![image](https://github.com/MOHDSAMIULLAH/iNotebook/assets/91786605/c2fb3389-133a-41ba-a366-d81c5208fdb7)
 

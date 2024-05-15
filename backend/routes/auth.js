@@ -19,7 +19,7 @@ const JWT_SECRET = 'itsTopsecret';
 router.post('/createuser', [
     body('name','enter name min 3 character').isLength({ min: 3 }),
     body('email','enter valid email').isEmail(),
-    body('password','enter password min 3 digit').isLength({ min: 5 }),
+    body('password','enter password min 3 digit').isLength({ min: 3 }),
 ], async (req, res) => {
   let success = false;
     // If there are errors, return Bad request and the errors

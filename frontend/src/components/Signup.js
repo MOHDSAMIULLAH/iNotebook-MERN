@@ -9,7 +9,7 @@ const Signup = ({showAlert}) => {
   const handleSubmit = async (e) => {
       e.preventDefault();
       const { name, email, password, cpassword} = credentials;
-      const response = await fetch("https://inotebook-backend-bk11.onrender.com/api/auth/createuser", {
+      const response = await fetch(`${process.env.REACT_APP_BASE_URL}/api/auth/createuser`, {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json'
@@ -52,12 +52,12 @@ const Signup = ({showAlert}) => {
           </div>
           <div className="mb-3">
             <label htmlFor="password" className="form-label">Password</label>
-            <input type="password" className="form-control" id="password" name="password" onChange={onChange} minLength={5} required/>
+            <input type="password" className="form-control" id="password" name="password" onChange={onChange}  required/>
           </div>
 
           <div className="mb-3">
             <label htmlFor="cpassword" className="form-label">Confirm Password</label>
-            <input type="password" className="form-control" id="cpassword" name="cpassword" onChange={onChange} minLength={5} required/>
+            <input type="password" className="form-control" id="cpassword" name="cpassword" onChange={onChange} required/>
           </div>
           
           <button type="submit" className="btn btn-primary">Signup</button>
