@@ -2,12 +2,12 @@
 //npm run start
 // const Router = require("./routes")
 
+require('dotenv').config();
 const cors = require('cors');
 const express = require('express')
 const mongoose = require("mongoose");
 const connectToMongo = require('./db');
 const port = process.env.PORT || 4000
-
 const app = express()
 
 app.use(cors());

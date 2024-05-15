@@ -1,13 +1,12 @@
 const mongoose = require('mongoose');
-// const mongoURI = "mongodb://localhost:27017/?readPreference=primary&directConnection=true"
-const mongoURI = "mongodb+srv://samiullah0813:samiullah0813@inotebook.a3bqzeq.mongodb.net/?retryWrites=true&w=majority"
-// const mongoURI = "process.env.MONGOURI";
+
+const mongoURI = process.env.MONGOURI;
 
 const connectToMongo = async () => {
     try {
         // mongoose.set('strictQuery', false)
-        mongoose.connect(mongoURI,
-            { useNewUrlParser: true, useUnifiedTopology: true }) 
+        console.log(process.env.MONGOURI)
+        mongoose.connect(process.env.MONGOURI) 
         console.log('Mongo atlas connected')
     } catch(error) {
         console.log(error)
