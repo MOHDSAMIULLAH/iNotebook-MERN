@@ -3,7 +3,7 @@
 # iNotebook
 
 ## Deployed Link Backend: https://inotebook-mern-m998.onrender.com
-## Deployed Link Frontend: 
+## Deployed Link Frontend: https://i-notebook-mern-six.vercel.app/
 
 ![image](https://github.com/MOHDSAMIULLAH/iNotebook/assets/91786605/c2fb3389-133a-41ba-a366-d81c5208fdb7)
 
