@@ -2,9 +2,6 @@ import NoteContext from "./noteContext";
 import { useState } from "react";
 
 const NoteState = (props) => {
-  // const host = "http://localhost:4000";
-  // const authtoken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ1YTNjYmQxYWRkMGQ4NGQzYmM3YmNmIn0sImlhdCI6MTY4MzYzNTM4OX0.2wwSWP8Wra4s0vI4K2HfsjZGfk8TK8QlQtBI8FZDtFc";
-  const host = "https://inotebook-mern-m998.onrender.com";
 
   const notesInitial = [];
   const [notes, setNotes] = useState(notesInitial);
@@ -28,7 +25,7 @@ const NoteState = (props) => {
   const addNote = async (title, description, tag) => {
     // TODO: API Call
     // API Call
-    const response = await fetch(`${host}/api/notes/addnote`, {
+    const response = await fetch(`${process.env.REACT_APP_BASE_URL}/api/notes/addnote`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -56,7 +53,7 @@ const NoteState = (props) => {
   // Delete a Note
   const deleteNote = async (id) => {
     // API Call
-    const response = await fetch(`${host}/api/notes/deletenote/${id}`, {
+    const response = await fetch(`${process.env.REACT_APP_BASE_URL}/api/notes/deletenote/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -75,7 +72,7 @@ const NoteState = (props) => {
   // Edit a Note
   const editNote = async (id, title, description, tag) => {
     // API Call
-    const response = await fetch(`${host}/api/notes/updatenote/${id}`, {
+    const response = await fetch(`${process.env.REACT_APP_BASE_URL}/api/notes/updatenote/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
