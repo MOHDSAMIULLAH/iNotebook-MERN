@@ -28,7 +28,7 @@ const Signup = ({showAlert}) => {
 
       }
       else{
-        showAlert("Invalid credentials","danger");
+        showAlert(json.error,"danger");
       }
   }
 
